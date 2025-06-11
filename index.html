@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Raphael - Portfólio</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">Meu Portfólio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre" class="container glass-card">
+            <img src="assets/imagens/ryan.webp" alt="Foto de Perfil" class="profile-pic">
+            <div class="bio">
+                <h2>Sobre Mim</h2>
+                <p>Olá! Meu nome é Lucas Raphael, e sou um estudante de Ciências da Computação apaixonado por tecnologia e inovação. Estou sempre em busca de novos desafios e oportunidades para aplicar meus conhecimentos em projetos inovadores. Este portfólio é uma coleção dos meus melhores trabalhos acadêmicos e pessoais.</p>
+            </div>
+        </section>
+
+        <section id="projetos" class="container glass-card">
+            <h2>Meus Projetos</h2>
+            <div class="projetos-grid">
+                
+                <div class="projeto-card">
+                    <img src="assets/imagens/moodify.png" alt="Imagem do Projeto 1">
+                    <h3>Moodify(EM DESENVOLVIMENTO)</h3>
+                    <p>MOODIFY is a web application that recommends music based on your mood. Using Spotify integration, the app suggests playlists and tracks that match your emotional state.(HTML, CSS, FastApi, Python).</p>
+                    <a href="https://github.com/LucasRaphael3/Moodify" class="btn-projeto">Ver no Github</a>
+                </div>
+
+                <div class="projeto-card">
+                    <img src="assets/imagens/imagetopdf.png" alt="Imagem do Projeto 2">
+                    <h3>Image To PDF Converter</h3>
+                    <p>Conversor de imagens para PDF(Python, HTML, CSS).</p>
+                    <a href="https://image-to-pdf-r4q6.onrender.com/" class="btn-projeto">Ver site</a>
+                </div>
+
+                </div>
+        </section>
+
+        <section id="habilidades" class="container">
+            <h2>Habilidades</h2>
+            <div class="habilidades-list">
+                <ul>
+                    <li>Redes</li>
+                    <li>Python</li>
+                    <li>MySQL</li>
+                    <li>Trabalho em Equipe</li>
+                    <li>Comunicação</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contato" class="container">
+            <h2>Vamos Conversar!</h2>
+            <p>Estou disponível para novas oportunidades e colaborações. Entre em contato comigo:</p>
+            <div class="contato-links">
+                <a href="mailto:lucasraphaeltavares05@gmail.com?subject=Contato%20através%20do%20seu%20Portfólio&body=Olá,%20Lucas!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar.">lucasraphaeltavares05@gmail.com</a>
+                <a href="https://www.linkedin.com/in/lucas-raphael-8300b1278/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/LucasRaphael3" target="_blank">GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Lucas Raphael. Todos os direitos reservados.</p>
+
+        <button id="blackhole-btn">???</button>
+    </footer>
+
+    <div id="blackhole"></div>
+
+    <div id="video-container">
+        <video id="easter-egg-video" width="640" height="360" controls loop style="display: none;">
+            <source src="assets/videos/easter-egg.mp4" type="video/mp4">
+        </video>
+        <button id="close-video-btn" style="display: none; position: absolute; top: 10px; right: 10px; font-size: 1.2rem; cursor: pointer;">Fechar</button>
+    </div>
+
+    <script defer src="script.js"></script>
+</body>
+</html>

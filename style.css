@@ -1,0 +1,335 @@
+/* --- 1. Definição da Paleta de Cores com Variáveis CSS --- */
+:root {
+    --cor-fundo-inicio: #231557;
+    --cor-fundo-fim: #18122B;
+    --cor-vidro: rgba(255, 255, 255, 0.05);
+    --cor-borda-vidro: rgba(255, 255, 255, 0.1);
+    --cor-texto-principal: #E0BBE4;
+    --cor-texto-secundario: #B784C7;
+    --cor-destaque: #9D4EDD; /* Roxo vibrante para destaque */
+    --cor-destaque-hover: #C77DFF;
+}
+
+/* --- 2. Estilos Globais e Fundo em Gradiente --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-texto-principal);
+    background: linear-gradient(135deg, var(--cor-fundo-inicio), var(--cor-fundo-fim));
+    background-attachment: fixed; /* Mantém o gradiente fixo durante a rolagem */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 2rem;
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* --- 3. Cabeçalho com Efeito de Vidro Flutuante --- */
+header {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--cor-borda-vidro);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+header .logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--cor-texto-secundario);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--cor-destaque-hover);
+}
+
+/* --- 4. Efeito "Glassmorphism" para os Cards e Seções --- */
+.glass-card {
+    background: var(--cor-vidro);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--cor-borda-vidro);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 2rem;
+}
+
+#sobre {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--cor-destaque);
+}
+
+/* --- 5. Estilos Modernos para Projetos e Habilidades --- */
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.projeto-card {
+    /* Herda o estilo glass-card e adiciona os seus próprios */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.projeto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.projeto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px; /* Bordas arredondadas na imagem */
+    margin-bottom: 1rem;
+}
+
+.projeto-card h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.projeto-card p {
+    flex-grow: 1;
+    color: var(--cor-texto-secundario);
+}
+
+.btn-projeto {
+    display: inline-block;
+    background: var(--cor-destaque);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-projeto:hover {
+    background: var(--cor-destaque-hover);
+    box-shadow: 0 0 20px rgba(199, 125, 255, 0.5); /* Efeito de brilho */
+}
+
+#habilidades ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+#habilidades li {
+    background: var(--cor-vidro);
+    border: 1px solid var(--cor-borda-vidro);
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#habilidades li:hover {
+    background: var(--cor-destaque);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* --- 6. Seção de Contato e Rodapé --- */
+#contato {
+    text-align: center;
+}
+
+#contato .contato-links a {
+    display: inline-block;
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--cor-texto-secundario);
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#contato .contato-links a:hover {
+    color: var(--cor-destaque-hover);
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--cor-texto-secundario);
+    opacity: 0.8;
+}
+
+/* --- Design Responsivo --- */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+    header .container {
+        flex-direction: column;
+    }
+    header nav ul {
+        padding: 1rem 0;
+    }
+    #sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* 1. Estilo do Botão Misterioso */
+#blackhole-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    background-color: #18122B;
+    color: var(--cor-destaque);
+    border: 2px solid var(--cor-destaque);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2000;
+}
+
+#blackhole-btn:hover {
+    background-color: var(--cor-destaque);
+    color: #fff;
+    transform: scale(1.1) rotate(180deg);
+    box-shadow: 0 0 20px var(--cor-destaque-hover);
+}
+
+/* 2. O Buraco Negro (inicialmente escondido) */
+#blackhole {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 9998;
+    box-shadow: 0 0 50px 20px #000, 0 0 70px 40px var(--cor-destaque-hover, #C77DFF);
+    animation: growAndSpin 2.5s forwards;
+}
+
+@keyframes growAndSpin {
+    0% {
+        transform: translate(-50%, -50%) scale(0) rotate(0deg);
+    }
+    70% {
+        transform: translate(-50%, -50%) scale(1) rotate(720deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(50) rotate(1080deg);
+    }
+}
+
+/* 3. Classe para 'puxar' os elementos */
+.sucked-in {
+    transition: all 1s ease-in;
+    transform-origin: center;
+    opacity: 0;
+    transform: scale(0) rotate(360deg) translate(var(--random-x), var(--random-y));
+}
+
+/* 4. Tela final (inicialmente escondida) */
+#video-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo preto semi-transparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    flex-direction: column; /* Para centralizar o botão de fechar abaixo do vídeo */
+}
+
+#easter-egg-video {
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    max-width: 90%;
+    max-height: 80%;
+}
+
+#close-video-btn {
+    background-color: var(--cor-destaque);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#close-video-btn:hover {
+    background-color: var(--cor-destaque-hover);
+}
