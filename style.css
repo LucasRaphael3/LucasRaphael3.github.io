@@ -252,6 +252,7 @@ footer {
     cursor: pointer;
     transition: all 0.3s ease;
     z-index: 2000;
+    animation: pulsate-glow 2.5s ease-in-out infinite;
 }
 
 #blackhole-btn:hover {
@@ -287,6 +288,21 @@ footer {
     100% {
         transform: translate(-50%, -50%) scale(50) rotate(1080deg);
     }
+}
+
+@keyframes pulsate-glow {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 15px 0px var(--cor-destaque);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px 10px rgba(199, 125, 255, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px 0px var(--cor-destaque);
+  }
 }
 
 /* 3. Classe para 'puxar' os elementos */
